@@ -57,7 +57,7 @@ export default function App() {
     <div className="overlay">
       {/* GitHub Icon */}
       <a 
-        href="https://github.com/YOUR_USERNAME/quote-of-the-day" 
+        href="https://github.com/ahmadyahya-05/quote-of-the-day" 
         target="_blank" 
         rel="noopener noreferrer"
         className="github-icon"
