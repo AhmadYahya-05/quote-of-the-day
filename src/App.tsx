@@ -9,6 +9,7 @@ interface Quote {
 export default function App() {
   
   const [quote, setQuote] = useState<Quote>({ q: '', a: '' })
+  const [error, setError] = useState<string>('')
   const [showQuote, setShowQuote] = useState(false)
   
   const [coinCaught, setCoinCaught] = useState(false)
@@ -30,8 +31,8 @@ export default function App() {
           console.log(data)
         }
       
-      } catch  {
-        console.log('Failed to fetch')
+      } catch (e: any) {
+        setError(e?.message ?? 'Failed to fetch')
       }
     }
     fetchQuote()
@@ -95,6 +96,7 @@ export default function App() {
       )}
       
       <div className="cloud-container">
+        {error && <p className="text-red-600">{error}</p>}
         {showQuote && quote ? (
           <>
             <p className="text">"{quote.q}"</p>
