@@ -85,6 +85,34 @@
     height: auto;
     object-fit: contain;
   }
+  
+  .github-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    color: #374151;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .github-icon:hover {
+    opacity: 1;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .github-icon svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
   .cloud-container {
     @apply relative w-[90vw] max-w-none text-center;
     background-image: url('/cloud.png');
